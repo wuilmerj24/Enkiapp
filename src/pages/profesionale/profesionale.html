@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Profesional Sesion</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <p>Aqui podras buscar en sesiones a que servicio quieres ofrecer</p>
+  <form [formGroup]="profesionale">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>SESION</ion-label>
+        <ion-select formControlName="sesion">
+          <ion-option value="nes">PRESIONE AQUI PARA CAMBIAR</ion-option>
+          <ion-option value="n64">Nintendo64</ion-option>
+          <ion-option value="ps">PlayStation</ion-option>
+          <ion-option value="genesis">Sega Genesis</ion-option>
+          <ion-option value="saturn">Sega Saturn</ion-option>
+          <ion-option value="snes">SNES</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>SERVICIO</ion-label>
+        <ion-select formControlName="servicio">
+          <ion-option value="nes">PRESIONE AQUI PARA CAMBIAR</ion-option>
+          <ion-option value="n64">Nintendo64</ion-option>
+          <ion-option value="ps">PlayStation</ion-option>
+          <ion-option value="genesis">Sega Genesis</ion-option>
+          <ion-option value="saturn">Sega Saturn</ion-option>
+          <ion-option value="snes">SNES</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </form>
+  <div padding>
+    <button ion-button block icon-right (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
+  </div>
+  <div class="card">
+    <div class="item item-text-wrap">
+        <img src="assets/img/84971.gif" class="imgVideo"/>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,39 @@
+  <ion-header>
+  <ion-navbar>
+    <ion-title>Registro de Usuarios</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="usuarioa">
+    <ion-list>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <ion-label floating>EMAIL</ion-label>
+        <ion-input formControlName="correo" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <ion-label floating>Confirmar Email:</ion-label>
+        <ion-input formControlName="confirmarEmail" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="ios-lock" item-left></ion-icon>
+        <ion-label floating>Contraseña:</ion-label>
+        <ion-input formControlName="clave" type="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="ios-lock" item-left></ion-icon>
+        <ion-label floating>Confirmar Contraseña:</ion-label>
+        <ion-input formControlName="ConfirmarPass" type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button block icon-right [disabled]="!usuarioa.valid" (click)="btnUsuariob()">Siguiente<ion-icon name="log-in"></ion-icon></button>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap">
+          <img src="assets/img/84971.gif" class="mundoSplash"/>
+      </div>
+    </div>
+  </form>
+</ion-content>

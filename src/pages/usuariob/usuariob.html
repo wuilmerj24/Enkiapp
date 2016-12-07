@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registro de Usuarios</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="usuariob">
+    <ion-list>
+      <ion-row>
+        <ion-col width-50>
+          <ion-item>
+            <ion-icon name="person" item-left></ion-icon>
+            <ion-label floating>Nombre</ion-label>
+            <ion-input formControlName="nombre" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col width-50>
+          <ion-item>
+            <ion-icon name="person" item-left></ion-icon>
+            <ion-label floating>Apellido</ion-label>
+            <ion-input formControlName="apellido" type="text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <ion-label floating>Direccion</ion-label>
+        <ion-input formControlName="direccion" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <ion-label floating>Ciudad</ion-label>
+        <ion-input formControlName="ciudad" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="code-working" item-left></ion-icon>
+        <ion-label floating>Codigo Postal</ion-label>
+        <ion-input formControlName="codigoPostal" type="number"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col width-50>
+          <ion-item>
+            <ion-icon name="call" item-left></ion-icon>
+            <ion-label floating>Telefono</ion-label>
+            <ion-input formControlName="telefono" type="tel"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col width-50>
+          <ion-item>
+            <ion-icon name="map" item-left></ion-icon>
+            <ion-label floating>Pais</ion-label>
+            <ion-select formControlName="pais">
+              <ion-option value="bacon" id="venezuela">Bacon</ion-option>
+              <ion-option value="bacon">Bacon</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+    <div padding>
+      <button ion-button block icon-right [disabled]="!usuariob.valid" (click)="btnContinuar()">Siguiente<ion-icon name="log-in"></ion-icon></button>
+    </div>
+    <div class="card">
+      <div class="item item-text-wrap">
+          <img src="assets/img/84971.gif" class="mundoSplash"/>
+      </div>
+    </div>
+  </form>
+</ion-content>

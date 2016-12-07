@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <p>A continuacion, necesitamus tu Numero de Seguro Social para la verificacion de antecedentes.</p>
+  <form [formGroup]="profesionalc">
+    <ion-list>
+      <ion-row>
+        <ion-item>
+          <ion-icon name="lock" item-left></ion-icon>
+          <ion-label floating>SOCIAL SECURITY NUMBER</ion-label>
+          <ion-input type="text" formControlName="segurosocial"></ion-input>
+        </ion-item>
+      </ion-row>
+    </ion-list>
+    <ion-icon name="checkmark" item-left> Permance Privado</ion-icon>
+    <ion-icon name="checkmark" item-left> La informacion esta segura y protegida</ion-icon>
+    <div padding>
+      <button ion-button block icon-right [disabled]="!profesionalc.valid" (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
+    </div>
+  </form>
+</ion-content>
+<ion-footer>
+  <div class="card">
+    <div class="item item-text-wrap">
+        <img src="assets/img/84971.gif" class="mundoSplash"/>
+    </div>
+  </div>
+</ion-footer>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Paises
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button navPop>
+        <span color="primary" ></span>
+        <ion-icon name="close" ></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item (click)="mostrarPais('+1','assets/img/ca.svg')">
+      <ion-avatar item-left>
+        <img src="assets/img/ca.svg">
+      </ion-avatar>
+      <h2>+1</h2>
+      <p>CANADA</p>
+    </ion-item>
+    <ion-item (click)="mostrarPais('+1','assets/img/us.svg')">
+      <ion-avatar item-left>
+        <img src="assets/img/us.svg">
+      </ion-avatar>
+      <h2>+1</h2>
+      <p>USA</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

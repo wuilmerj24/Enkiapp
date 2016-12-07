@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Verifica El Telefono Movil</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <ion-card-header style="color: #fff;">
+      Hemos enviado el codigo de verificacion a este numero
+    </ion-card-header>
+
+    <ion-card-content style="border:1px solid white; text-align: center;">
+      (0416)-449381
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header style="color: #fff;">
+      Introduce el codigo de verificacion que te hemos enviado
+    </ion-card-header>
+    <ion-card-content>
+      <form>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="call" item-left></ion-icon>
+            <ion-input type="number" placeholder="----"></ion-input>
+          </ion-item>
+        </ion-list>
+        <div padding>
+          <button ion-button block icon-right>VERIFICAR<ion-icon name="log-in"></ion-icon></button>
+        </div>
+        <ion-row>
+          <ion-col width-50>
+              <button ion-button block icon-right>Reenviar el texto<ion-icon name="log-in"></ion-icon></button>
+          </ion-col>
+          <ion-col width-50>
+              <button ion-button block icon-right (click)="btnUsuarioe()">Cambiar Numero<ion-icon name="log-in"></ion-icon></button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <div class="card">
+    <div class="item item-text-wrap">
+        <img src="assets/img/84971.gif" class="mundoSplash"/>
+    </div>
+  </div>
+</ion-content>

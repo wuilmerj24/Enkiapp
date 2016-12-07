@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="profesionald">
+    <div class="card">
+      <div class="item item-text-wrap">
+          <img src="assets/img/certificados.png" class="imgCabecera"/>
+      </div>
+    </div>
+    <div padding style="border: 1px solid #fff">
+      <p>Revisa la autorizacion de divulgacion y autorizacion de la verificacion de antecedentes</p>
+      <p>DIVULGACION DE LA COMPRBACION DE ANTECEDENTES</p>
+      <p>ENKI, LLC, ("ENKI"), entidad que ofrece servicios a varios domicilios, solicitados a traves de la app</p>
+      <ion-list>
+        <ion-item>
+          <ion-label>Recibir una copia gratuita de mi informe de verificacion de antecedentes</ion-label>
+          <ion-checkbox color="dark"  formControlName="copiaseguridad"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-label>Acepto y Reconozco</ion-label>
+        <ion-checkbox color="dark"  formControlName="aceptarcondiciones"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>
+<ion-footer>
+  <div padding>
+    <button ion-button block icon-right (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
+  </div>
+</ion-footer>

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Registro Profesional</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form [formGroup]="profesionala">
+    <ion-list>
+      <ion-row>
+        <ion-col width-50>
+          <ion-item>
+            <ion-icon name="person" item-left></ion-icon>
+            <ion-label floating>Nombre</ion-label>
+              <ion-input type="text" formControlName="nombre" class="primeraMayuscula" clearInput></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col width-50>
+          <ion-item>
+            <ion-label floating>Apellido</ion-label>
+            <ion-input type="text" formControlName="apellido" class="primeraMayuscula" clearInput></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <ion-label floating>Correo</ion-label>
+        <ion-input type="email" formControlName="correo" class="primeraMayuscula" clearInput></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col width-50>
+          <ion-item>
+            <ion-icon name="call" item-left></ion-icon>
+            <img *ngIf="imgPais" [src]="imgPais" item-left class="imgBanderasCSS"/>
+            <ion-label floating>Pais</ion-label>
+            <ion-input formControlName="pais" type="text" (click)="presentModal()" [value]="pais" [(ngModel)]="pais"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col width-50>
+          <ion-item>
+            <ion-label floating>Telefono</ion-label>
+            <ion-input type="tel" formControlName="telefono" [textMask]="{mask:telefono}" clearInput></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-item>
+        <ion-icon name="lock" item-left></ion-icon>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" formControlName="clave" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="pin" item-left></ion-icon>
+        <ion-label floating>Ciudad</ion-label>
+        <ion-input type="text" formControlName="ciudad" class="primeraMayuscula" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="code" item-left></ion-icon>
+        <ion-label floating>Codigo postal</ion-label>
+        <ion-input type="text" formControlName="codigoPostal"  class="primeraMayuscula"  clearInput></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button block icon-right [disabled]="!profesionala.valid" (click)="btnContinuar()">Siguiente<ion-icon name="log-in"></ion-icon></button>
+    </div>
+  </form>
+</ion-content>

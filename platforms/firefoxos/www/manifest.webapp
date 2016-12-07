@@ -1,0 +1,22 @@
+{
+    "launch_path": "/index.html",
+    "installs_allowed_from": [
+        "*"
+    ],
+    "version": "0.0.1",
+    "name": "Enkiapp",
+    "description": "An awesome Ionic/Cordova app.",
+    "developer": {
+        "name": "Ionic Framework Team",
+        "url": "http://ionicframework.com/"
+    },
+    "permissions": {
+        "geolocation": {
+            "description": "Required for accessing user location."
+        }
+    },
+    "icons": {
+        "60": "/icon/icon-60.png",
+        "128": "/icon/icon-128.png"
+    }
+}
