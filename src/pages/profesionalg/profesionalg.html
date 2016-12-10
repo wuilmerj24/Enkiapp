@@ -6,7 +6,7 @@
 <ion-content padding>
   <div class="card">
     <div class="item item-text-wrap">
-        <img src="assets/img/certificados.png" class="imgCertificado"/>
+        <img [src]="imagenLicenciaLocal" *ngIf="imagenLicenciaLocal" class="imgCertificado"/>
     </div>
   </div>
   <p padding>Asegurate de que tu Professional License sea legible</p>
@@ -16,12 +16,12 @@
     <ion-row>
       <ion-col width-50>
         <ion-item>
-          <button ion-button block icon-right>Siguiente<ion-icon name="log-in"></ion-icon></button>
+          <button ion-button block icon-right (click)="volverTomar()">Volver a tomar<ion-icon name="camera"></ion-icon></button>
         </ion-item>
       </ion-col>
       <ion-col width-50>
         <ion-item>
-          <button ion-button block icon-right>Siguiente<ion-icon name="log-in"></ion-icon></button>
+          <button ion-button block icon-right (click)="guardarFoto()">Guardar<ion-icon name="cloud-upload"></ion-icon></button>
         </ion-item>
       </ion-col>
     </ion-row>

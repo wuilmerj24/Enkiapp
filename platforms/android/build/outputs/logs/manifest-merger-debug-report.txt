@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:2:1-19:12
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:2:98-140
 		INJECTED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml
@@ -36,7 +36,7 @@ ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:4:5-67
 	android:name
 		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:4:22-64
 application
-ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:5:5-12:19
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:5:5-13:19
 	android:label
 		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:5:81-113
 	android:supportsRtl
@@ -71,30 +71,54 @@ category#android.intent.category.LAUNCHER
 ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:9:17-77
 	android:name
 		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:9:27-74
+activity#com.mbppower.CameraActivity
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:12:9-143
+	android:screenOrientation
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:12:62-98
+	android:theme
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:12:99-140
+	android:name
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:12:19-61
 uses-sdk
-ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:13:5-74
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:14:5-74
 MERGED from [android:CordovaLib:unspecified:debug] /var/www/html/Enkiapp/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/AndroidManifest.xml:25:5-44
 	android:targetSdkVersion
-		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:13:42-71
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:14:42-71
 	android:minSdkVersion
-		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:13:15-41
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:14:15-41
 uses-feature#android.hardware.location.gps
-ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:14:5-66
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:15:5-66
 	android:name
-		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:14:19-63
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:15:19-63
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:15:5-81
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:16:5-81
 	android:name
-		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:15:22-78
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:16:22-78
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:16:5-79
-	android:name
-		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:16:22-76
-uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:17:5-79
 	android:name
 		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:17:22-76
-uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:18:5-89
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:18:5-79
 	android:name
-		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:18:22-86
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:18:22-76
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:19:5-89
+	android:name
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:19:22-86
+uses-feature#android.hardware.camera
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:20:5-60
+	android:name
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:20:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:21:5-70
+	android:name
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:21:19-67
+uses-permission#android.permission.CAMERA
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:22:5-65
+	android:name
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:22:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from /var/www/html/Enkiapp/platforms/android/AndroidManifest.xml:23:22-78

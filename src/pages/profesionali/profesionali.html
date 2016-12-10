@@ -1,29 +1,19 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Professional Face</ion-title>
+    <ion-title>PROFESSIONAL LICENSE</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding>
-  <div class="card">
-    <div class="item item-text-wrap">
-        <img src="assets/img/certificados.png" class="imgCertificado"/>
+  <ion-content padding>
+    <div class="figuraCamara">
+
     </div>
-  </div>
-  <p>Asegurate de que tu Face se vea</p>
-</ion-content>
-<ion-footer>
-  <ion-list no-lines>
-    <ion-row>
-      <ion-col width-50>
-        <ion-item>
-          <button ion-button block icon-right>Volver a Tomar<ion-icon name="log-in"></ion-icon></button>
-        </ion-item>
-      </ion-col>
-      <ion-col width-50>
-        <ion-item>
-          <button ion-button block icon-right>Guardar<ion-icon name="log-in"></ion-icon></button>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-list>
-</ion-footer>
+    <p padding>Toma una foto de tu Professional Face</p>
+    <p>Asegurate de que podamos ver tu Face</p>
+  </ion-content>
+  <ion-footer>
+    <ion-list no-lines>
+      <ion-item>
+        <button ion-button block icon-right (click)="tomarFotoFace()" >Tomar Una Foto<ion-icon name="log-in"></ion-icon></button>
+      </ion-item>
+    </ion-list>
+  </ion-footer>

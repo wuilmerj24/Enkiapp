@@ -1,5 +1,17 @@
 page-profesionali {
-  .imgCertificado{
-    border-radius: 50%;
+  ion-content{
+    background-color: transparent !important;
+    text-align: center !important;
+    color: black !important;
+  }
+
+  .figuraCamara{
+    border: 1px solid white !important;
+    border-radius: 50% !important;
+    width: 70% !important;
+    height: 50% !important;
+    background-color: transparent !important;
+    margin: auto;
+    display: block;
   }
 }

@@ -32,7 +32,7 @@
     </ion-list>
   </form>
   <div padding>
-    <button ion-button block icon-right (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
+    <button ion-button block icon-right [disabled]="!profesionale.valid" (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
   </div>
   <div class="card">
     <div class="item item-text-wrap">

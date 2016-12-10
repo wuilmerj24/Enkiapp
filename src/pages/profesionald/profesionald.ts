@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfesionalePage } from '../profesionale/profesionale';
 import { DataTest } from '../../providers/data-test';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'page-profesionald',
@@ -10,15 +10,26 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class ProfesionaldPage {
   profesionald:FormGroup;
+  public aceptoVar:Boolean=true;
+  public recibirVar:any;
   constructor(public navCtrl: NavController, public datatest: DataTest, public formBuilder: FormBuilder) {
     this.profesionald=this.createMyForm();
   }
 
   private createMyForm(){
     return this.formBuilder.group({
-      copiaseguridad:['',Validators.required],
-      aceptarcondiciones:['',Validators.required]
+      //aceptarcondiciones:['',Validators.compose([Validators.required])]
     })
+  }
+
+  aceptoFunc(){
+    this.aceptoVar=!this.aceptoVar;
+    console.log(this.aceptoVar);
+  }
+
+  recibirFunc(){
+    this.recibirVar=!this.recibirVar;
+    console.log(this.recibirVar);
   }
 
   btnContinuar(){

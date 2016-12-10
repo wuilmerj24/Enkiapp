@@ -58,6 +58,27 @@
                         "endOffset": 154
                     }
                 }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 223,
+                    "endLine": 10,
+                    "endColumn": 9,
+                    "endOffset": 535
+                },
+                "from": {
+                    "file": "/var/www/html/Enkiapp/platforms/android/res/values/camera_theme.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 1,
+                        "startOffset": 52,
+                        "endLine": 7,
+                        "endColumn": 9,
+                        "endOffset": 364
+                    }
+                }
             }
         ]
     }

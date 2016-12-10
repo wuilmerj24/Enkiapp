@@ -17,20 +17,20 @@
       <ion-list>
         <ion-item>
           <ion-label>Recibir una copia gratuita de mi informe de verificacion de antecedentes</ion-label>
-          <ion-checkbox color="dark"  formControlName="copiaseguridad"></ion-checkbox>
+          <ion-checkbox  color="dark" (click)="recibirFunc()">Checkbox Label</ion-checkbox>
         </ion-item>
       </ion-list>
     </div>
     <ion-list no-lines>
       <ion-item>
         <ion-label>Acepto y Reconozco</ion-label>
-        <ion-checkbox color="dark"  formControlName="aceptarcondiciones"></ion-checkbox>
+        <ion-checkbox color="dark" (click)="aceptoFunc()"></ion-checkbox>
       </ion-item>
     </ion-list>
   </form>
 </ion-content>
 <ion-footer>
   <div padding>
-    <button ion-button block icon-right (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
+    <button ion-button block icon-right [disabled]="aceptoVar || !profesionald.valid" (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
   </div>
 </ion-footer>

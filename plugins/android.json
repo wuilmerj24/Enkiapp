@@ -27,6 +27,12 @@
         },
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "com.ionicframework.enkiapp675511"
+        },
+        "com.mbppower.camerapreview": {
+            "PACKAGE_NAME": "com.ionicframework.enkiapp271507"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.ionicframework.enkiapp271507"
         }
     },
     "dependent_plugins": {

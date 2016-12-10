@@ -4,43 +4,42 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-list>
-    <ion-item>
-      <ion-label floating>SESION</ion-label>
-      <ion-select>
-        <ion-option value="nes">PRESIONE AQUI PARA CAMBIAR</ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label floating>SERVICIO</ion-label>
-      <ion-select>
-        <ion-option value="nes">PRESIONE AQUI PARA CAMBIAR</ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
-      </ion-select>
-    </ion-item>
-  </ion-list>
-  <div class="card">
-    <div class="item item-text-wrap">
-        <img src="assets/img/certificados.png" class="imgCertificado"/>
+  <form [formGroup]="profesionalf">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>SESION</ion-label>
+        <ion-select formControlName="sesion" disabled="true">
+          <ion-option value="nes">PRESIONE AQUI PARA CAMBIAR</ion-option>
+          <ion-option value="n64">Nintendo64</ion-option>
+          <ion-option value="ps">PlayStation</ion-option>
+          <ion-option value="genesis">Sega Genesis</ion-option>
+          <ion-option value="saturn">Sega Saturn</ion-option>
+          <ion-option value="snes">SNES</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>SERVICIO</ion-label>
+        <ion-select formControlName="servicio" disabled="true">
+          <ion-option value="nes">PRESIONE AQUI PARA CAMBIAR</ion-option>
+          <ion-option value="n64">Nintendo64</ion-option>
+          <ion-option value="ps">PlayStation</ion-option>
+          <ion-option value="genesis">Sega Genesis</ion-option>
+          <ion-option value="saturn">Sega Saturn</ion-option>
+          <ion-option value="snes">SNES</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <div class="card">
+      <div class="item item-text-wrap">
+          <img src="assets/img/84971.gif" class="imgCertificado"/>
+      </div>
     </div>
-  </div>
-  <div padding>
-    <button ion-button block icon-right (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
-  </div>
-  <p>Toma una foto de tu Professional License</p>
-  <p>Asegurate de que podamos leer todos los detalles con facilidad</p>
+    <p>Toma una foto de tu Professional License</p>
+    <p>Asegurate de que podamos leer todos los detalles con facilidad</p>
+  </form>
 </ion-content>
 <ion-footer>
   <div padding>
-    <button ion-button block icon-right (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
+    <button ion-button block icon-right (click)="btnContinuar()">Continuar<ion-icon name="camera"></ion-icon></button>
   </div>
 </ion-footer>
