@@ -1,17 +1,12 @@
 page-profesionalh {
   ion-content{
-    background-color: transparent !important;
+    background-color: black !important;
     text-align: center !important;
-    color: black !important;
+    color: white !important;
   }
 
-  .figuraCamara{
-    border: 1px solid white !important;
-    border-radius: 50% !important;
-    width: 70% !important;
-    height: 50% !important;
-    background-color: transparent !important;
-    margin: auto;
-    display: block;
+  .imgCertificado{
+    width: 50%;
   }
+
 }

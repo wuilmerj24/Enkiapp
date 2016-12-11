@@ -9,8 +9,10 @@ import { CameraPreview, CameraPreviewRect } from 'ionic-native';
   templateUrl: 'profesionali.html'
 })
 export class ProfesionaliPage {
+  constructor(public navCtrl: NavController,public datatest: DataTest) {
+    this.tomarFotoFace();
+  }
 
-  constructor(public navCtrl: NavController,public datatest: DataTest) {}
   tomarFotoFace(){
     let cameraRect: CameraPreviewRect = {
       x: 80,
