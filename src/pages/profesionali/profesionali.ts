@@ -9,8 +9,11 @@ import { CameraPreview, CameraPreviewRect } from 'ionic-native';
   templateUrl: 'profesionali.html'
 })
 export class ProfesionaliPage {
+  public timeoutId:any;
   constructor(public navCtrl: NavController,public datatest: DataTest) {
-    this.tomarFotoFace();
+    this.timeoutId=setTimeout(() =>{
+      this.tomarFotoFace();
+    }, 1000);
   }
 
   tomarFotoFace(){
@@ -36,9 +39,9 @@ export class ProfesionaliPage {
   }
 
   capturarImagen(){
-    CameraPreview.setOnPictureTakenHandler().subscribe((result) => {
-      console.log(result);
-      // do something with the result
+    CameraPreview.takePicture({
+      maxWidth: 640,
+      maxHeight: 640
     });
   }
 
