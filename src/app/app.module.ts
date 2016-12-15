@@ -21,6 +21,7 @@ import { ProfesionalgPage } from '../pages/profesionalg/profesionalg';
 import { ProfesionalhPage } from '../pages/profesionalh/profesionalh';
 import { ProfesionaliPage } from '../pages/profesionali/profesionali';
 import { ProfesionaljPage } from '../pages/profesionalj/profesionalj';
+import { ProfesionalkPage } from '../pages/profesionalk/profesionalk';
 import { DataTest } from '../providers/data-test';
 import { TextMaskModule } from '../../node_modules/angular2-text-mask/src/angular2TextMask';
 
@@ -48,6 +49,7 @@ import { ModalPage } from '../pages/modal/modal';
     ProfesionalhPage,
     ProfesionaliPage,
     ProfesionaljPage,
+    ProfesionalkPage,
     ModalPage
   ],
   imports: [
@@ -77,6 +79,7 @@ import { ModalPage } from '../pages/modal/modal';
     ProfesionalhPage,
     ProfesionaliPage,
     ProfesionaljPage,
+    ProfesionalkPage,
     ModalPage
   ],
   providers: [

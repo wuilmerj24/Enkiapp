@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import { DataTest } from '../../providers/data-test';
-//import { ProfesionaljPage } from '../profesionalj/profesionalj';
+import { ProfesionaljPage } from '../profesionalj/profesionalj';
 import { CameraPreview, CameraPreviewRect } from 'ionic-native';
 
 @Component({
@@ -42,6 +42,14 @@ export class ProfesionaliPage {
     CameraPreview.takePicture({
       maxWidth: 640,
       maxHeight: 640
+    });
+
+    CameraPreview.setOnPictureTakenHandler().subscribe((result) => {
+      console.log(result);
+      this.datatest.fotoprofesional=result[0];
+      CameraPreview.stopCamera();
+      this.navCtrl.push(ProfesionaljPage);
+      // do something with the result
     });
   }
 
