@@ -47,6 +47,7 @@ export class ProfesionalaPage {
     this.datatest.postal=this.profesionala.value.postal;
     this.navCtrl.push(ProfesionalbPage);
   }
+
   presentModal() {
     let modal = this.modalCtrl.create(ModalPage);
     modal.onDidDismiss(data => {
@@ -54,7 +55,6 @@ export class ProfesionalaPage {
       this.imgPais=data.bandera;
     });
     modal.present();
-
   }
 
   ionViewDidLoad() {

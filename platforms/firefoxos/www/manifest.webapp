@@ -13,8 +13,10 @@
     "permissions": {
         "geolocation": {
             "description": "Required for accessing user location."
-        }
+        },
+        "systemXHR": {}
     },
+    "type": "privileged",
     "icons": {
         "60": "/icon/icon-60.png",
         "128": "/icon/icon-128.png"

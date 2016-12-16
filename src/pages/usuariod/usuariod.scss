@@ -1,6 +1,14 @@
 page-usuariod {
-  .contenido{
-    color: #fff;
+  ion-content{
+    background-color: black !important;
+    color:white !important;
+    text-align: center !important;
+  }
+
+  .centrarDiv{
+    width: 25% !important;
+    margin: auto !important;
+    display: block !important; 
   }
 
   .mundoSplash{

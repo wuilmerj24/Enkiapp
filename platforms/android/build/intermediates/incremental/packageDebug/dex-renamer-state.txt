@@ -1,4 +1,4 @@
-#Mon Dec 12 13:05:44 VET 2016
+#Thu Dec 15 17:50:40 VET 2016
 base.0=/var/www/html/Enkiapp/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/var/www/html/Enkiapp/platforms/android/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

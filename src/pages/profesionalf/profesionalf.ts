@@ -12,6 +12,7 @@ import { Camera } from 'ionic-native';
 export class ProfesionalfPage {
   profesionalf:FormGroup;
   public image:string;
+
   constructor(public navCtrl: NavController, public datatest: DataTest, public formBuilder: FormBuilder) {
     this.profesionalf=this.createMyForm();
   }
@@ -25,14 +26,16 @@ export class ProfesionalfPage {
 
   btnContinuar(){
     let options = {
-      destinationType: Camera.DestinationType.DATA_URL,
-      targetWidth: 1000,
-      targetHeight: 1000,
-      quality: 100
+      quality         : 100,
+      allowEdit       : false,
+      destinationType : Camera.DestinationType.FILE_URI,
+      targetWidth: 1366,
+      targetHeight: 768
     }
     Camera.getPicture( options )
     .then(imageData => {
-      this.image = `data:image/jpeg;base64,${imageData}`;
+      //this.image ='data:image/png;base64,' + imageData;
+      this.image =imageData;
       this.datatest.fotolicencia=this.image;
       console.log(this.datatest.fotolicencia);
       this.navCtrl.push(ProfesionalgPage);

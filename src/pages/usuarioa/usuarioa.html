@@ -6,25 +6,27 @@
 <ion-content>
   <form [formGroup]="usuarioa">
     <ion-list>
-      <ion-item>
-        <ion-icon name="mail" item-left></ion-icon>
-        <ion-label floating>EMAIL</ion-label>
-        <ion-input formControlName="correo" type="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="mail" item-left></ion-icon>
-        <ion-label floating>Confirmar Email:</ion-label>
-        <ion-input formControlName="confirmarEmail" type="email"></ion-input>
-      </ion-item>
+      <div FormGroupName="correosRetry">
+        <ion-item>
+          <ion-icon name="mail" item-left></ion-icon>
+          <ion-label floating>EMAIL</ion-label>
+          <ion-input formControlName="correo" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail" item-left></ion-icon>
+          <ion-label floating>Confirmar Email:</ion-label>
+          <ion-input formControlName="confirmarEmail" type="email"></ion-input>
+        </ion-item>
+      </div>
       <ion-item>
         <ion-icon name="ios-lock" item-left></ion-icon>
         <ion-label floating>Contraseña:</ion-label>
-        <ion-input formControlName="clave" type="password"></ion-input>
+        <ion-input formControlName="clave" type="password" placeholder="Contraseña"></ion-input>
       </ion-item>
       <ion-item>
         <ion-icon name="ios-lock" item-left></ion-icon>
-        <ion-label floating>Confirmar Contraseña:</ion-label>
-        <ion-input formControlName="ConfirmarPass" type="password"></ion-input>
+        <ion-label floating>Confirmar contraseña:</ion-label>
+        <ion-input formControlName="passwordConfirmation" type="password" placeholder="Confirmar contraseña"></ion-input>
       </ion-item>
     </ion-list>
     <div padding>

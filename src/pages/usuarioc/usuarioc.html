@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <form>
+  <form [formGroup]="usuarioc">
     <ion-list>
       <ion-row>
         <ion-col width-50>
@@ -21,39 +21,38 @@
       <ion-item>
         <ion-icon name="card" item-left></ion-icon>
         <ion-label floating>Nombre (TDC)</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" formControlName="nombreTDC"></ion-input>
       </ion-item>
       <ion-item>
         <ion-icon name="card" item-left></ion-icon>
         <ion-label floating>Numero de la TDC</ion-label>
-        <ion-input  type="number"></ion-input>
+        <ion-input  type="number" formControlName="numeroTDC"></ion-input>
       </ion-item>
       <ion-row>
         <ion-col width-33>
           <ion-item>
             <ion-icon name="calendar" item-left></ion-icon>
             <ion-label floating>MM</ion-label>
-            <ion-input type="date"></ion-input>
+            <ion-input type="date" formControlName="mmTDC"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col width-33>
           <ion-item>
-            <ion-icon name="calendar" item-left></ion-icon>
             <ion-label floating>AA</ion-label>
-            <ion-input type="date"></ion-input>
+            <ion-input type="date" formControlName="aaTDC"></ion-input>
           </ion-item>
         </ion-col>
         <ion-col width-33>
           <ion-item>
             <ion-icon name="card" item-left></ion-icon>
             <ion-label floating>Cvv</ion-label>
-            <ion-input  type="number"></ion-input>
+            <ion-input  type="number" formControlName="cvvTDC"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
     </ion-list>
     <div padding>
-      <button ion-button block icon-right (click)="btnGuardarRegistro()">Siguiente<ion-icon name="log-in"></ion-icon></button>
+      <button ion-button block icon-right [disabled]="!usuarioc.valid" (click)="btnGuardarRegistro()">Siguiente<ion-icon name="log-in"></ion-icon></button>
     </div>
   </form>
 </ion-content>

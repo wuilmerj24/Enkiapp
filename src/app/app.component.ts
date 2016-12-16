@@ -2,14 +2,14 @@ import { Component} from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import {ProfesionalkPage } from '../pages/profesionalk/profesionalk';
+import {HomePage } from '../pages/home/home';
 //import { ProfesionaljPage } from '../pages/profesionalj/profesionalj';
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
 })
 
 export class MyApp {
-  rootPage =ProfesionalkPage;
+  rootPage =HomePage;
   //rootPage = ProfesionaljPage;
   constructor(platform: Platform) {
     platform.ready().then(() => {

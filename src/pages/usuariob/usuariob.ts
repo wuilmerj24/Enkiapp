@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { UsuariocPage } from '../usuarioc/usuarioc';
+import { Usuario } from '../../providers/usuario';
+import { ModalController} from 'ionic-angular';
+import { ModalPage } from '../modal/modal';
+
 
 @Component({
   selector: 'page-usuariob',
@@ -9,7 +13,9 @@ import { UsuariocPage } from '../usuarioc/usuarioc';
 })
 export class UsuariobPage {
   usuariob:FormGroup;
-  constructor(public navCtrl: NavController, public formBuilder: FormBuilder) {
+  public pais:any;
+  public imgPais="";
+  constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public usuarioProvider: Usuario, public modalCtrl: ModalController) {
     this.usuariob=this.createMyForm();
   }
 
@@ -26,8 +32,25 @@ export class UsuariobPage {
   }
 
   btnContinuar(){
+    this.usuarioProvider.nombre=this.usuariob.value.nombre;
+    this.usuarioProvider.apellido=this.usuariob.value.apellido;
+    this.usuarioProvider.direccion=this.usuariob.value.direccion;
+    this.usuarioProvider.ciudad=this.usuariob.value.ciudad;
+    this.usuarioProvider.codigopostal=this.usuariob.value.codigoPostal;
+    this.usuarioProvider.telefono=this.usuariob.value.telefono;
+    this.usuarioProvider.pais=this.usuariob.value.pais;
     this.navCtrl.push(UsuariocPage);
   }
+
+  presentModal() {
+    let modal = this.modalCtrl.create(ModalPage);
+    modal.onDidDismiss(data => {
+      this.usuariob.controls['pais'].setValue(data.pais);
+      this.imgPais=data.bandera;
+    });
+    modal.present();
+  }
+
   ionViewDidLoad() {
     console.log('Hello UsuariobPage Page');
   }

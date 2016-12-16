@@ -11,6 +11,7 @@
     <feature name="Camera">
         <param name="firefoxos-package" value="Camera" />
     </feature>
+    <permission name="systemXHR" privileged="true" />
     <name>Enkiapp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>

@@ -33,6 +33,12 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.ionicframework.enkiapp271507"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.ionicframework.enkiapp271507"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.enkiapp271507"
         }
     },
     "dependent_plugins": {

@@ -23,6 +23,7 @@ import { ProfesionaliPage } from '../pages/profesionali/profesionali';
 import { ProfesionaljPage } from '../pages/profesionalj/profesionalj';
 import { ProfesionalkPage } from '../pages/profesionalk/profesionalk';
 import { DataTest } from '../providers/data-test';
+import { Usuario } from '../providers/usuario';
 import { TextMaskModule } from '../../node_modules/angular2-text-mask/src/angular2TextMask';
 
 import { ModalPage } from '../pages/modal/modal';
@@ -83,7 +84,8 @@ import { ModalPage } from '../pages/modal/modal';
     ModalPage
   ],
   providers: [
-    [DataTest]
+    [DataTest],
+    [Usuario]
   ]
 })
 export class AppModule {}
