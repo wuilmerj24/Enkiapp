@@ -24,6 +24,9 @@ import { ProfesionaljPage } from '../pages/profesionalj/profesionalj';
 import { ProfesionalkPage } from '../pages/profesionalk/profesionalk';
 import { DataTest } from '../providers/data-test';
 import { Usuario } from '../providers/usuario';
+import { Tiposesion } from '../providers/tiposesion';
+import { Sesioncliente } from '../providers/sesioncliente';
+import { Sesionprofesional } from '../providers/sesionprofesional';
 import { TextMaskModule } from '../../node_modules/angular2-text-mask/src/angular2TextMask';
 
 import { ModalPage } from '../pages/modal/modal';
@@ -85,7 +88,10 @@ import { ModalPage } from '../pages/modal/modal';
   ],
   providers: [
     [DataTest],
-    [Usuario]
+    [Usuario],
+    [Tiposesion],
+    [Sesioncliente],
+    [Sesionprofesional]
   ]
 })
 export class AppModule {}

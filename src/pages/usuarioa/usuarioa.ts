@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 import { UsuariobPage } from '../usuariob/usuariob';
 import { Usuario } from '../../providers/usuario';
 
@@ -23,6 +23,21 @@ export class UsuarioaPage {
       clave: ['', Validators.required],
       passwordConfirmation: ['', Validators.required]
     });
+  }
+
+  passwordValidator(g: FormGroup){
+    if (g.value != this.usuarioProvider.correo) {
+      alert("no coinciden: "+g.value+" | "+this.usuarioProvider.correo);
+      return {invalidPassword: false};
+    }else{
+      alert("coinciden: "+g.value+" | "+this.usuarioProvider.correo);
+      return {invalidPassword: true};
+    }
+  }
+
+  capturarCorreos(){
+    this.usuarioProvider.correo=this.usuarioa.value.correo;
+    this.usuarioProvider.confirmarEmail=this.usuarioa.value.confirmarEmail;
   }
 
   btnUsuariob(){

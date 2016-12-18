@@ -1,13 +1,14 @@
 <ion-header>
-  <ion-navbar class="panelPrincipal">
-    <button ion-button icon-only menuToggle color="light"> <ion-icon name="menu" md="md-menu"></ion-icon></button>
-    <ion-title>ENKI</ion-title>
-  </ion-navbar>
+  <ion-toolbar class="panelPrincipal">
+    <button ion-button icon-only menuToggle color="dark"><ion-icon name="menu" md="md-menu"></ion-icon></button>
+    <ion-title text-center>ENKI</ion-title>
+  </ion-toolbar>
 </ion-header>
-<ion-menu [content]="content">
+
+<ion-menu [content]="content" color="dark">
   <ion-header>
     <ion-toolbar color="dark" padding>
-      <ion-title>Pages</ion-title>
+      <ion-title><!--nombre del cliente--></ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>

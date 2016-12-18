@@ -1,5 +1,7 @@
 page-cliente {
-
+  ion-list{
+    background: black;
+  }
   .contenidoDiv{
     background: #fff;
   }
@@ -7,10 +9,12 @@ page-cliente {
   .toolbar-background {
     color: white;
     background-color: #3e6372;
+    text-align: center !important;
   }
 
   ion-content{
-    background: rgb(229, 227, 223);
+    background: black !important;
+    //background: rgb(229, 227, 223);
   }
 
   #map {

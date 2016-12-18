@@ -15,7 +15,7 @@
       </ion-item>
     </ion-list>
     <div padding>
-      <button ion-button block icon-right [disabled]="!recuperar.valid">Enviar <ion-icon name="mail"></ion-icon></button>
+      <button ion-button block icon-right [disabled]="!recuperar.valid" (click)="btnRecuperar()">Enviar <ion-icon name="mail"></ion-icon></button>
     </div>
     <div class="card">
       <div class="item item-text-wrap">

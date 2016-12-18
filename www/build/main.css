@@ -19644,6 +19644,10 @@ sub {
   }
 }
 
+page-cliente ion-list {
+  background: black;
+}
+
 page-cliente .contenidoDiv {
   background: #fff;
 }
@@ -19651,10 +19655,11 @@ page-cliente .contenidoDiv {
 page-cliente .toolbar-background {
   color: white;
   background-color: #3e6372;
+  text-align: center !important;
 }
 
 page-cliente ion-content {
-  background: #e5e3df;
+  background: black !important;
 }
 
 page-cliente #map {
@@ -19771,7 +19776,7 @@ page-recuperar ion-content {
 }
 
 page-sesion ion-content {
-  background-color: #000 !important;
+  background-color: black !important;
 }
 
 page-tiporegistro ion-content {

@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ViewController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { Platform } from 'ionic-angular';
 
 @Component({
   selector: 'page-cliente',
@@ -13,8 +14,12 @@ export class ClientePage {
   map: any;
   rootPage:any;
 
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController, public alertCtrl:AlertController) {
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController, public alertCtrl:AlertController,platform: Platform) {
+    platform.registerBackButtonAction(function () {
+      //alert("si")
+    }, 100);
   }
+
 
   ionViewDidLoad() {
     let locationOptions = {timeout: 10000, enableHighAccuracy: true};
