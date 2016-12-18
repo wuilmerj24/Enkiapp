@@ -4,18 +4,18 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <form>
+  <form [formGroup]="usuarioe">
     <ion-list>
       <ion-title>Numero Ingresado Anteriormente</ion-title>
-      <p>(1234) 123-1234</p>
+      <ion-input type="text" formControlName="telRegistrado" [value]="telRegistrado" [(ngModel)]="telRegistrado"></ion-input>
       <ion-item>
         <ion-icon name="call" item-left></ion-icon>
         <ion-label floating>Numero de Telefono</ion-label>
-        <ion-input type="tel"></ion-input>
+        <ion-input type="tel" formControlName="nuevoNumero" [value]="nuevoNumero" [(ngModel)]="nuevoNumero"></ion-input>
       </ion-item>
     </ion-list>
     <div padding>
-      <button ion-button block icon-right>Continuar<ion-icon name="log-in"></ion-icon></button>
+      <button ion-button block icon-right [disabled]="!usuarioe.valid" (click)="cambiarNum()">Continuar<ion-icon name="log-in"></ion-icon></button>
     </div>
     <div class="card">
       <div class="item item-text-wrap">

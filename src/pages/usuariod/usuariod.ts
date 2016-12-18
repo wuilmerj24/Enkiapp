@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Usuario } from '../../providers/usuario';
+import { UsuarioePage } from '../usuarioe/usuarioe';
 
 @Component({
   selector: 'page-usuariod',
@@ -30,7 +31,7 @@ export class UsuariodPage {
   }
 
   btnCambiarnum(){
-
+    this.navCtrl.push(UsuarioePage);
   }
 
   ionViewDidLoad() {

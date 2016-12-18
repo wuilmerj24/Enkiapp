@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions} from '@angular/http';
+import { Http, Headers, RequestOptions, Response} from '@angular/http';
 import { Transfer } from 'ionic-native';
 import 'rxjs/add/operator/map';
 
@@ -47,7 +47,7 @@ export class DataTest {
     let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
     let options = new RequestOptions({ headers: headers });
     this.datos="tipo=nuevoProfesional&nombre="+this.nombre+"&apellido="+this.apellido+"&correo="+this.correo+"&pais="+this.pais+"&telefono="+this.telefono+"&clave="+this.clave+"&ciudad="+this.ciudad+"&postal="+this.postal+"&seguroSocial="+this.segurosocial+"&recibirCopiaAntecedentes="+this.copiaseguridad+"&sesion="+this.sesion+"&servicio="+this.servicio+"&fotoLiencia="+this.fotolicencia+"&fotoFace="+this.fotoprofesional;
-    this.http.post('http://developerwym.com.ve/enki/recibe.php',this.datos,options).map(res => res.json()).subscribe(data => {console.log(data);},err =>{console.log("Error!:",err);});
+    this.http.post('http://developerwym.com.ve/enki/recibe.php',this.datos,options).map(res => res.text()).subscribe(data => {alert("ok"+data);},err =>{alert("Error! Form cliente:"+err);});
   }
 
   fotoLicencia(){
@@ -65,7 +65,7 @@ export class DataTest {
         this.fotoProfesional();
     }, (err) => {
        // error
-       alert("Error: "+ JSON.stringify(err));
+       alert("Error Foto licencia: "+ JSON.stringify(err));
     })
   }
 
@@ -84,7 +84,7 @@ export class DataTest {
        this.enviarFormProfesional();
     }, (err) => {
        // error
-       alert("Error: "+ JSON.stringify(err));
+       alert("Error: Foto profesional"+ JSON.stringify(err));
     })
   }
 

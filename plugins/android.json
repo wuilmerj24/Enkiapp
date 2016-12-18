@@ -39,6 +39,9 @@
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.ionicframework.enkiapp271507"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.ionicframework.enkiapp271507"
         }
     },
     "dependent_plugins": {

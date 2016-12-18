@@ -10,20 +10,20 @@ import {RecuperarPage} from '../recuperar/recuperar';
 })
 export class SesionPage {
   login:FormGroup;
-
+  public emailRegex ="[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})";
   constructor(public navCtrl: NavController, public formBuilder: FormBuilder) {
     this.login=this.createMyForm();
   }
 
   private createMyForm(){
     return this.formBuilder.group({
-      correo:['',Validators.required],
+      correo: ['',Validators.compose([Validators.required,Validators.pattern(this.emailRegex)])],
       clave:['',Validators.compose([Validators.required,Validators.minLength(8),Validators.pattern('[A-Za-z0-9!?-]{8,12}')])]
     })
   }
 
-  changePageToMapaCliente(){
-      this.navCtrl.push(ClientePage);
+  iniciarSesion(){
+      //this.navCtrl.push(ClientePage);
   }
 
   recuperar(){

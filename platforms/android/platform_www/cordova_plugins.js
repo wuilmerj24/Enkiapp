@@ -275,6 +275,19 @@ module.exports = [
         "clobbers": [
             "window.FileTransfer"
         ]
+    },
+    {
+        "id": "cordova-plugin-x-toast.Toast",
+        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
+        "pluginId": "cordova-plugin-x-toast",
+        "clobbers": [
+            "window.plugins.toast"
+        ]
+    },
+    {
+        "id": "cordova-plugin-x-toast.tests",
+        "file": "plugins/cordova-plugin-x-toast/test/tests.js",
+        "pluginId": "cordova-plugin-x-toast"
     }
 ];
 module.exports.metadata = 
@@ -291,7 +304,8 @@ module.exports.metadata =
     "com.mbppower.camerapreview": "0.0.8",
     "cordova-plugin-camera": "2.3.0",
     "cordova-plugin-file": "4.3.1",
-    "cordova-plugin-file-transfer": "1.6.1"
+    "cordova-plugin-file-transfer": "1.6.1",
+    "cordova-plugin-x-toast": "2.5.2"
 };
 // BOTTOM OF METADATA
 });
