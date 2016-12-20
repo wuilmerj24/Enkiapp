@@ -6,9 +6,9 @@ page-cliente {
     background: #fff;
   }
 
-  .toolbar-background {
+  .panelPrincipal {
     color: white;
-    background-color: #3e6372;
+    background: #3e6372;
     text-align: center !important;
   }
 
@@ -20,5 +20,18 @@ page-cliente {
   #map {
     width: 100%;
     height: 100%;
+  }
+
+  .txtNombreUsuario{
+    height: 15vh !important;
+  }
+
+  .itemOpciones{
+    height: 10vh !important;
+  }
+
+  .itemFinal{
+    height: 12vh !important;
+    border-top: 1px solid white !important;
   }
 }

@@ -3,6 +3,7 @@ import { NavController, ViewController } from 'ionic-angular';
 import { MenuController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
+import { Sesioncliente } from '../../providers/sesioncliente';
 
 @Component({
   selector: 'page-cliente',
@@ -13,8 +14,8 @@ import { Platform } from 'ionic-angular';
 export class ClientePage {
   map: any;
   rootPage:any;
-
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController, public alertCtrl:AlertController,platform: Platform) {
+  public nombreCliente:any;
+  constructor(public navCtrl: NavController, public menuCtrl: MenuController, public alertCtrl:AlertController,platform: Platform, public clienteProvider: Sesioncliente) {
     platform.registerBackButtonAction(function () {
       //alert("si")
     }, 100);
@@ -49,15 +50,17 @@ export class ClientePage {
 
         (error) => {
             console.log(error);
-            let alert = this.alertCtrl.create({
+            /*let alert = this.alertCtrl.create({
               title: 'Error GPS!',
               subTitle: 'Error: '+error,
               buttons: ['OK']
             });
-            alert.present();
+            alert.present();*/
         }, locationOptions
     );
     console.log('Hello ClientePage Page');
+    this.nombreCliente=this.clienteProvider.nombre+" "+this.clienteProvider.apellido;
+    console.log(this.nombreCliente);
   }
 
 }

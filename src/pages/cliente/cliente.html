@@ -1,47 +1,47 @@
 <ion-header>
-  <ion-toolbar class="panelPrincipal">
+  <ion-toolbar color="panelEnky">
     <button ion-button icon-only menuToggle color="dark"><ion-icon name="menu" md="md-menu"></ion-icon></button>
     <ion-title text-center>ENKI</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-menu [content]="content" color="dark">
+<ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar color="dark" padding>
-      <ion-title><!--nombre del cliente--></ion-title>
+    <ion-toolbar padding color="nombreUsuario" class="txtNombreUsuario">
+      <ion-title text-center>{{nombreCliente}}<!--nombre del cliente--></ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content>
     <ion-list no-lines>
-      <ion-item>
+      <ion-item class="itemOpciones">
         <ion-icon name="card" item-left></ion-icon>
         <label menuClose >Pagos</label>
       </ion-item>
-      <ion-item>
+      <ion-item class="itemOpciones">
         <ion-icon name="filing" item-left></ion-icon>
         <label menuClose >Historial</label>
       </ion-item>
-      <ion-item>
+      <ion-item class="itemOpciones">
         <ion-icon name="notifications-outline" item-left></ion-icon>
         <label menuClose >Notificaciones</label>
       </ion-item>
-      <ion-item>
+      <ion-item class="itemOpciones">
         <ion-icon name="thumbs-up" item-left></ion-icon>
         <label menuClose >Unete a ENKI</label>
       </ion-item>
-      <ion-item>
+      <ion-item class="itemOpciones">
         <ion-icon name="settings" item-left></ion-icon>
         <label menuClose >Configurcion</label>
       </ion-item>
-      <ion-item>
+      <ion-item class="itemOpciones">
         <ion-icon name="help-buoy" item-left></ion-icon>
         <label menuClose >Ayuda</label>
       </ion-item>
-      <ion-item>
+      <ion-item class="itemOpciones">
         <ion-icon name="exit" item-left></ion-icon>
         <label menuClose >Cerrar Sesion</label>
       </ion-item>
-      <ion-item>
+      <ion-item class="itemFinal">
         <ion-icon name="home" item-left></ion-icon>
         <label menuClose >Quienes Somos</label>
       </ion-item>

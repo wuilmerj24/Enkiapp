@@ -22,13 +22,13 @@ export class Sesioncliente {
 
   //datos tarjeta de credito
   public id:any="";
-  public idTDC:any="";
-  public tipoTDC:any="";
-  public nombreTDC:any="";
-  public numeroTDC:any="";
-  public mesTDC:any="";
-  public anioTDC:any="";
-  public cvvTDC:any="";
+  public idTDC=[];
+  public tipoTDC=[];
+  public nombreTDC=[];
+  public numeroTDC=[];
+  public mesTDC=[];
+  public anioTDC=[];
+  public cvvTDC=[];
 
   constructor(public http: Http, public toastCtrl:ToastController) {
     console.log('Hello Sesioncliente Provider');

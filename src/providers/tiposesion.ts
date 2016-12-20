@@ -71,12 +71,12 @@ export class Tiposesion {
     //this.http.post('http://192.168.0.100/enki/recibe.php',this.datos,options).map(res => res.text()).subscribe(data => {alert("ok"+data);},err =>{alert("Error! Form cliente:"+err);});
     this.http.post(url,this.datos,options).map(res => res.json()).subscribe(data => {
       for(let i in data){
-        this.providerCliente.tipoTDC=data[i].tipo;
-        this.providerCliente.nombreTDC=data[i].nombre;
-        this.providerCliente.numeroTDC=data[i].numero;
-        this.providerCliente.mesTDC=data[i].mes;
-        this.providerCliente.anioTDC=data[i].anio;
-        this.providerCliente.cvvTDC=data[i].cvv;
+        this.providerCliente.tipoTDC=[{tipo:data[i].tipo}];
+        this.providerCliente.nombreTDC==[{tipo:data[i].nombre}];
+        this.providerCliente.numeroTDC==[{tipo:data[i].numero}];
+        this.providerCliente.mesTDC==[{tipo:data[i].mes}];
+        this.providerCliente.anioTDC==[{tipo:data[i].anio}];
+        this.providerCliente.cvvTDC==[{tipo:data[i].cvv}];
       }
         /*
         //datos tarjeta de credito
