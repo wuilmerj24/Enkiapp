@@ -28,8 +28,13 @@ import { Tiposesion } from '../providers/tiposesion';
 import { Sesioncliente } from '../providers/sesioncliente';
 import { Sesionprofesional } from '../providers/sesionprofesional';
 import { TextMaskModule } from '../../node_modules/angular2-text-mask/src/angular2TextMask';
-
 import { ModalPage } from '../pages/modal/modal';
+import { EmpresaPage } from '..pages/empresa/empresa';
+import { EmpresabPage } from '..pages/empresab/empresab';
+import { EmpresacPage } from '..pages/empresac/empresac';
+import { EmpresadPage } from '..pages/empresad/empresad';
+import { EmpresaePage } from '..pages/empresae/empresae';
+import { EmpresafPage } from '..pages/empresaf/empresaf';
 @NgModule({
   declarations: [
     MyApp,
@@ -54,7 +59,13 @@ import { ModalPage } from '../pages/modal/modal';
     ProfesionaliPage,
     ProfesionaljPage,
     ProfesionalkPage,
-    ModalPage
+    ModalPage,
+    EmpresaPage,
+    EmpresabPage,
+    EmpresacPage,
+    EmpresadPage,
+    EmpresaePage,
+    EmpresafPage
   ],
   imports: [
     TextMaskModule,
@@ -84,7 +95,13 @@ import { ModalPage } from '../pages/modal/modal';
     ProfesionaliPage,
     ProfesionaljPage,
     ProfesionalkPage,
-    ModalPage
+    ModalPage,
+    EmpresaPage,
+    EmpresabPage,
+    EmpresacPage,
+    EmpresadPage,
+    EmpresaePage,
+    EmpresafPage
   ],
   providers: [
     [DataTest],
