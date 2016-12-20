@@ -13,23 +13,24 @@ import { ModalPage } from '../modal/modal';
 export class ProfesionalaPage {
   public pais:any;
   profesionala:FormGroup;
-  public telefono=['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
-  public postal=[/[1,9]/,/\d/,/\d/,/\d/];
+  public telefono=['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  public postal=[/[a-z]/,/[a-z]/,'-',/\d/,/\d/,/\d/,/\d/];
   public emailRegex ="[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})";
   //[textMask]="{mask:postal}" esto va en el input
   public imgPais="";
+  public passRegex ="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$";
   constructor(public navCtrl: NavController, public datatest: DataTest, public formBuilder: FormBuilder, public modalCtrl: ModalController) {
     this.profesionala=this.createMyForm();
   }
 
   private createMyForm(){
     return this.formBuilder.group({
-      nombre:['',Validators.required],
-      apellido:['',Validators.required],
-      correo:['',Validators.compose([Validators.required,Validators.minLength(8),Validators.pattern(this.emailRegex)])],
+      nombre:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      apellido:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      correo:['',Validators.compose([Validators.required,Validators.pattern(this.emailRegex)])],
       pais:['',Validators.required],
-      telefono:['',Validators.required],
-      clave:['',Validators.compose([Validators.required,Validators.minLength(8),Validators.maxLength(9)])],
+      telefono:['',Validators.compose([Validators.required,Validators.minLength(11)])],
+      clave:['',Validators.compose([Validators.required,Validators.pattern(this.passRegex)])],
       ciudad:['',Validators.compose([Validators.required,Validators.minLength(3)])],
       codigoPostal:['',Validators.compose([Validators.required,Validators.minLength(7)])]
     });

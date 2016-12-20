@@ -11,7 +11,7 @@
         <ion-item>
           <ion-icon name="lock" item-left></ion-icon>
           <ion-label floating>SOCIAL SECURITY NUMBER</ion-label>
-          <ion-input type="text" formControlName="segurosocial"></ion-input>
+            <ion-input type="text" formControlName="segurosocial"  [textMask]="{mask:TDCcvv}"></ion-input>
         </ion-item>
       </ion-row>
     </ion-list>
@@ -21,11 +21,9 @@
       <button ion-button block icon-right [disabled]="!profesionalc.valid" (click)="btnContinuar()">Continuar<ion-icon name="log-in"></ion-icon></button>
     </div>
   </form>
-</ion-content>
-<ion-footer>
   <div class="card">
     <div class="item item-text-wrap">
         <img src="assets/img/84971.gif" class="mundoSplash"/>
     </div>
   </div>
-</ion-footer>
+</ion-content>

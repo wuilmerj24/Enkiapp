@@ -9,7 +9,6 @@ page-cliente {
   .panelPrincipal {
     color: white;
     background: #3e6372;
-    text-align: center !important;
   }
 
   ion-content{
@@ -24,6 +23,8 @@ page-cliente {
 
   .txtNombreUsuario{
     height: 15vh !important;
+    font-size: 10px !important;
+    color:#fff !important;
   }
 
   .itemOpciones{
@@ -33,5 +34,17 @@ page-cliente {
   .itemFinal{
     height: 12vh !important;
     border-top: 1px solid white !important;
+    background: white !important;
+    color:black !important;
+  }
+
+  ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
   }
 }

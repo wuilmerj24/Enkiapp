@@ -16,7 +16,6 @@
         </ion-col>
         <ion-col width-50>
           <ion-item>
-            <ion-icon name="person" item-left></ion-icon>
             <ion-label floating>Apellido</ion-label>
             <ion-input formControlName="apellido" type="text"></ion-input>
           </ion-item>
@@ -35,22 +34,21 @@
       <ion-item>
         <ion-icon name="code-working" item-left></ion-icon>
         <ion-label floating>Codigo Postal</ion-label>
-        <ion-input formControlName="codigoPostal" type="number"></ion-input>
+        <ion-input formControlName="codigoPostal" type="text" [textMask]="{mask:postal}"></ion-input>
       </ion-item>
       <ion-row>
-        <ion-col width-50>
+        <ion-col width-67>
           <ion-item>
             <ion-icon name="call" item-left></ion-icon>
             <ion-label floating>Telefono</ion-label>
-            <ion-input formControlName="telefono" type="tel"></ion-input>
+            <ion-input formControlName="telefono" type="tel" [textMask]="{mask:telefono}"></ion-input>
           </ion-item>
         </ion-col>
-        <ion-col width-50>
+        <ion-col width-33>
           <ion-item>
-            <ion-icon name="call" item-left></ion-icon>
             <img *ngIf="imgPais" [src]="imgPais" item-left class="imgBanderasCSS"/>
             <ion-label floating>Pais</ion-label>
-            <ion-input formControlName="pais" type="text" (click)="presentModal()" [value]="pais" [(ngModel)]="pais"></ion-input>
+            <ion-input formControlName="pais" type="text" (click)="presentModal()" [value]="pais" [(ngModel)]="pais" readonly></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>

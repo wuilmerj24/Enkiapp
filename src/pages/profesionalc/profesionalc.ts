@@ -10,20 +10,24 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class ProfesionalcPage {
   profesionalc:FormGroup;
+  public TDCcvv=[/[1-9]/,/\d/,'-',/[1-9]/,/\d/,/\d/,'-',/[1-9]/,/\d/,/\d/,/\d/];
+
   constructor(public navCtrl: NavController, public datatest: DataTest, public formBuilder: FormBuilder) {
     this.profesionalc=this.createMyForm();
   }
 
   private createMyForm(){
     return this.formBuilder.group({
-      segurosocial:['',Validators.compose([Validators.required,Validators.minLength(9),Validators.maxLength(9)])]
-    })
+      segurosocial:['',Validators.compose([Validators.required,Validators.minLength(11)])]
+    });
   }
 
   btnContinuar(){
     this.datatest.segurosocial=this.profesionalc.value.segurosocial;
-    this.navCtrl.push(ProfesionaldPage);
+    console.log(this.profesionalc);
+    //this.navCtrl.push(ProfesionaldPage);
   }
+
   ionViewDidLoad() {
     console.log('Hello ProfesionalcPage Page');
   }

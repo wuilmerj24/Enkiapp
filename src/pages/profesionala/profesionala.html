@@ -38,7 +38,7 @@
         <ion-col width-50>
           <ion-item>
             <ion-label floating>Telefono</ion-label>
-            <ion-input type="tel" formControlName="telefono" [textMask]="{mask:telefono}" clearInput></ion-input>
+            <ion-input type="tel" formControlName="telefono" [textMask]="{mask:telefono}" clearInput style="font-size: 14px !important;"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
@@ -55,7 +55,7 @@
       <ion-item>
         <ion-icon name="code" item-left></ion-icon>
         <ion-label floating>Codigo postal</ion-label>
-        <ion-input type="text" formControlName="codigoPostal"  class="primeraMayuscula"  clearInput></ion-input>
+        <ion-input type="text" formControlName="codigoPostal"  class="primeraMayuscula"  [textMask]="{mask:postal}" clearInput></ion-input>
       </ion-item>
     </ion-list>
     <div padding>

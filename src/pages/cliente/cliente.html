@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar color="panelEnky">
     <button ion-button icon-only menuToggle color="dark"><ion-icon name="menu" md="md-menu"></ion-icon></button>
-    <ion-title text-center>ENKI</ion-title>
+    <ion-title menuToggle>ENKI</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar padding color="nombreUsuario" class="txtNombreUsuario">
-      <ion-title text-center>{{nombreCliente}}<!--nombre del cliente--></ion-title>
+      <h4 text-center>{{nombreCliente}}<!--nombre del cliente--></h4>
     </ion-toolbar>
   </ion-header>
   <ion-content>
@@ -55,5 +55,4 @@
 </ion-content>
 
 <ion-footer>
-  <input type="text" id="msgGPS">
 </ion-footer>

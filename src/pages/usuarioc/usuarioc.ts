@@ -10,17 +10,20 @@ import { Usuario } from '../../providers/usuario';
 })
 export class UsuariocPage {
   public usuarioc:FormGroup;
+  public myAA:any="";
+  public TDCFormat=[/[1,9]/,/\d/,/\d/,/\d/,'-',/[1,9]/,/\d/,/\d/,/\d/,'-',/[1,9]/,/\d/,/\d/,/\d/,'-',/[1,9]/,/\d/,/\d/,/\d/];
+  public TDCcvv=[/[1-9]/,/\d/,/\d/];
   constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public usuarioProvider: Usuario) {
     this.usuarioc=this.createMyForm();
   }
 
   private createMyForm(){
     return this.formBuilder.group({
-      nombreTDC:['',Validators.compose([Validators.required])],
-      numeroTDC:['',Validators.compose([Validators.required])],
+      nombreTDC:['',Validators.compose([Validators.required,Validators.minLength(7)])],
+      numeroTDC:['',Validators.compose([Validators.required,Validators.minLength(16),Validators.maxLength(16)])],
       mmTDC:['',Validators.compose([Validators.required])],
       aaTDC:['',Validators.compose([Validators.required])],
-      cvvTDC:['',Validators.compose([Validators.required])]
+      cvvTDC:['',Validators.compose([Validators.required,Validators.minLength(3),Validators.maxLength(3)])]
     })
   }
 

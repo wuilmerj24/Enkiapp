@@ -15,18 +15,20 @@ export class UsuariobPage {
   usuariob:FormGroup;
   public pais:any;
   public imgPais="";
+  public telefono=['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  public postal=[/[a-z]/,/[a-z]/,'-',/\d/,/\d/,/\d/,/\d/];
   constructor(public navCtrl: NavController, public formBuilder: FormBuilder, public usuarioProvider: Usuario, public modalCtrl: ModalController) {
     this.usuariob=this.createMyForm();
   }
 
   private createMyForm(){
     return this.formBuilder.group({
-      nombre:['',Validators.compose([Validators.required])],
-      apellido:['',Validators.compose([Validators.required])],
-      direccion:['',Validators.compose([Validators.required])],
-      ciudad:['',Validators.compose([Validators.required])],
-      codigoPostal:['',Validators.compose([Validators.required])],
-      telefono:['',Validators.compose([Validators.required])],
+      nombre:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      apellido:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      direccion:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      ciudad:['',Validators.compose([Validators.required,Validators.minLength(3)])],
+      codigoPostal:['',Validators.compose([Validators.required,Validators.minLength(7)])],
+      telefono:['',Validators.compose([Validators.required,Validators.minLength(11)])],
       pais:['',Validators.compose([Validators.required])],
     })
   }

@@ -7,6 +7,7 @@ import { ToastController} from 'ionic-angular';
 @Injectable()
 export class Usuario {
   //pagina usuarioa
+  public resultadoConfirmPAss:any="";
   public correo:any="";
   public clave:any="";
 

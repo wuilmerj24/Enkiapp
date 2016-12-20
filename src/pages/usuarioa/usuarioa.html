@@ -14,18 +14,20 @@
       <ion-item>
         <ion-icon name="mail" item-left></ion-icon>
         <ion-label floating>Confirmar Email:</ion-label>
-        <ion-input formControlName="confirmarEmail" type="email" (keyup)="capturarCorreos()"></ion-input>
+        <ion-input formControlName="confirmarEmail" (blur)="mostrarError()"  type="email"></ion-input>
       </ion-item>
-      <ion-item>
-        <ion-icon name="ios-lock" item-left></ion-icon>
-        <ion-label floating>Contraseña:</ion-label>
-        <ion-input formControlName="clave" type="password" placeholder="Contraseña"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="ios-lock" item-left></ion-icon>
-        <ion-label floating>Confirmar contraseña:</ion-label>
-        <ion-input formControlName="passwordConfirmation" type="password" placeholder="Confirmar contraseña"></ion-input>
-      </ion-item>
+      <div formGroupName="passwordRetry">
+        <ion-item>
+          <ion-icon name="ios-lock" item-left></ion-icon>
+          <ion-label floating>Contraseña:</ion-label>
+          <ion-input formControlName="clave" type="password" (keyup)="mostrarInfoPassword()" placeholder="Contraseña"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="ios-lock" item-left></ion-icon>
+          <ion-label floating>Confirmar contraseña:</ion-label>
+          <ion-input formControlName="passwordConfirmation" type="password" placeholder="Confirmar contraseña" (blur)="mostrarError()"></ion-input>
+        </ion-item>
+      </div>
     </ion-list>
     <div padding>
       <button ion-button block icon-right [disabled]="!usuarioa.valid" (click)="btnUsuariob()">Siguiente<ion-icon name="log-in"></ion-icon></button>
